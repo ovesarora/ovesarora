@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title></title>
+    <title>Oves Arora</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
       rel="stylesheet"
@@ -13,34 +12,78 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <header>
       <nav>
-        <div class="logo">
-          <h1 class="animate__animated animate__heartBeat animate__infinite">
-            oves arora
-          </h1>
+        <h1>oves arora</h1>
+
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-        <div class="menu">
+
+        <div class="menu" id="menu">
           <a href="#">Home</a>
+          <a href="#">gallery</a>
           <a href="https://youtube.com/channel/UCWFc0ZQWan9zdtIXJm_DPQA"
-            >gallery</a
+            >About</a
           >
-          <a href="#">About</a>
           <a href="#">Contact</a>
         </div>
       </nav>
 
       <main>
         <section>
-          <h3>Welcome To My Web</h3>
+          <h3>These are My Best Friends</h3>
           <h1>HELLO <span class="change_content"></span></h1>
-          <p>"I am Not a Robot"</p>
+          <p>My Gorgeous Friends</p>
           <a href="#" class="btnone">learn more</a>
           <a href="#" class="btntwo">signup here</a>
         </section>
       </main>
     </header>
+
+    <footer>
+      <div class="waves">
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
+        <div class="wave wave4"></div>
+      </div>
+      <ul class="icons">
+        <li class="fab fa-facebook"></li>
+        <li class="fab fa-instagram-square"></li>
+        <li class="fab fa-linkedin"></li>
+        <li class="fab fa-twitter"></li>
+      </ul>
+      <ul class="links">
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+        <li>Team</li>
+        <li>Services</li>
+      </ul>
+
+      <p>&copy; 2021 Oves Arora | All Rights Reserved</p>
+    </footer>
+
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const menu = document.getElementById("menu");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        menu.classList.toggle("active");
+      });
+    </script>
   </body>
 </html>

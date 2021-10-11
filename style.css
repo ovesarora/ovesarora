@@ -1,52 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 header {
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)),
-    url("https://images.unsplash.com/photo-1539994812137-f96a90e51126?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://images.unsplash.com/photo-1541075217473-93119871682d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1459&q=80");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 nav {
   width: 100%;
-  height: 15vh;
   background: rgba(0, 0, 0, 0.2);
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-transform: uppercase;
+  padding: 1rem;
 }
 
-nav .logo {
-  width: 25%;
-  text-align: center;
+nav .hamburger {
+  display: none;
 }
 
 nav .menu {
-  width: 40%;
   display: flex;
   justify-content: space-around;
 }
 
 nav .menu a {
-  width: 25%;
   text-decoration: none;
   color: white;
   font-weight: bold;
+  margin: 0 1rem;
 }
 
-nav .menu a:first-child{
-    color: #00b894;
+nav .menu a:first-child {
+  color: #00b894;
 }
 
-main{
+main {
   height: 85vh;
   width: 100%;
   display: flex;
@@ -56,76 +57,218 @@ main{
   color: white;
 }
 
-section h3{
-    font-size: 35px;
-    font-weight: 200;
-    letter-spacing: 3px;
-    text-shadow: 1px 1px 2px black;
-
+section h3 {
+  font-size: 35px;
+  font-weight: 200;
+  letter-spacing: 3px;
+  text-shadow: 1px 1px 2px black;
 }
 
-section h1{
-   margin: 30px 0 20px 0;
-   font-size: 55px;
-   font-weight: 700;
-   text-shadow: 2px 1px 5px black;
-   text-transform: uppercase;
+section h1 {
+  margin: 30px 0 20px 0;
+  font-size: 55px;
+  font-weight: 700;
+  text-shadow: 2px 1px 5px black;
+  text-transform: uppercase;
 }
 
-section p{
-   font-size: 25px;
-   word-spacing: 2px;
-   margin-bottom: 25px;
-   text-shadow: 1px 1px 1px black ;
+section p {
+  font-size: 25px;
+  word-spacing: 2px;
+  margin-bottom: 25px;
+  text-shadow: 1px 1px 1px black;
 }
 
-section a{
-   padding: 12px 30px;
-   border-radius: 4px;
-   outline: none;
-   text-transform: uppercase;
-   font-size: 13px;
-   font-weight: 500;
-   text-decoration: none;
-   letter-spacing: 1px;
-   transition: all .5s ease;
-
-}
-
-section .btnone{
-  
+section a {
+  padding: 12px 25px;
+  border-radius: 4px;
+  outline: none;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: all 0.5s ease;
   background: #fff;
   color: #000;
+  margin: 0 0.3rem;
 }
 
-.btnone:hover{
-     background: #00b894;
-     color: white;
+section a:hover {
+  background: #b3b3b3;
+  color: white;
 }
 
-section .btntwo{
-   background: #00b894;
-   color: white;
+.change_content::after {
+  content: "";
+  animation: changetext 10s infinite linear;
+  color: #b3b3b3;
 }
 
-.btntwo:hover{
+@keyframes changetext {
+  0% {
+    content: "SaaD";
+  }
+  20% {
+    content: "Aainal";
+  }
+  35% {
+    content: "Zaib";
+  }
+  60% {
+    content: "Samil";
+  }
+  80% {
+    content: "Irfan";
+  }
+  100% {
+    content: "prajaval";
+  }
+}
+
+footer {
+  padding: 1rem;
+  background: #b3b3b3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+footer .icons li {
+  font-size: 2rem;
+  transition: all 0.3s ease;
+  color: white;
+  margin: 0 1rem;
+}
+
+footer .icons li:hover {
+  transform: translateY(-10px);
+}
+
+footer .links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+footer .links li {
+  margin: 0.5rem 1rem;
+  color: white;
+}
+
+footer p {
+  margin: 0;
+  padding: 0;
+  margin-top: 2rem;
+  color: white;
+  text-align: center;
+}
+
+footer .wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("./images/wave.png");
+  background-size: 1000px 100px;
+  filter: brightness(150%) saturate(0);
+}
+
+footer .wave1 {
+  z-index: 10;
+  opacity: 1;
+  bottom: 0;
+  animation: wave 4s linear infinite;
+}
+
+footer .wave2 {
+  z-index: 9;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: wave2 4s linear infinite;
+}
+
+footer .wave3 {
+  z-index: 10;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: wave 3s linear infinite;
+}
+
+footer .wave4 {
+  z-index: 9;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: wave2 3s linear infinite;
+}
+
+@keyframes wave {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-position-x: 0;
+  }
+}
+
+@keyframes wave2 {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 3rem;
+    height: 2rem;
+  }
+
+  nav .hamburger span {
     background: #fff;
-    color: #000;
+    width: 100%;
+    height: 3px;
+    border-radius: 50px;
+  }
+
+  nav h1 {
+    font-size: 1.5rem;
+  }
+
+  nav .menu {
+    display: none;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    top: 4.16rem;
+    left: 0;
+    width: 100%;
+  }
+
+  nav .menu.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav .menu a {
+    margin: 1rem 0;
+  }
+
+  section h3 {
+    font-size: 1.5rem;
+  }
+  section h1 {
+    font-size: 2rem;
+  }
 }
-
-.change_content::after{
-    content: '';
-    animation: changetext 10s infinite linear;
-    color: #00b894;
-
-}
-
-@keyframes changetext{
-    0%{content: "oves";}
-    20%{content: "saad";}
-    35%{content: "aainal";}
-    60%{content: "irfan";}
-    80%{content: "samil";}
-    100%{content: "zaib";}
-}
-
